@@ -12,7 +12,7 @@ func main() {
 func GroupAnagrams(words []string) [][]string {
 	s := make(map[string][]string)
 	for _,val := range words {
-		vv := sortWord(val)
+		vv := sortCharactersInWord(val)
 		//st := strings.Split(val,"")
 		//sort.Strings(st)
 		//vv := strings.Join(st,"")
@@ -24,7 +24,7 @@ func GroupAnagrams(words []string) [][]string {
 	}
 	return sss
 }
-func sortWord(s string)string {
+func sortCharactersInWord(s string)string {
 	byteSlice := []byte(s)
 	sort.Slice(byteSlice, func(i, j int) bool {
 		return byteSlice[i] < byteSlice[j]
