@@ -17,22 +17,22 @@ func SpiralTraverse(array [][]int) []int {
 	rowStart := 0
 	rowEnd := len(array) - 1
 	colStart := 0
-	colEnd :=  len(array[0]) -1
-	arrayVal := make([]int,0)
+	colEnd := len(array[0]) - 1
+	arrayVal := make([]int, 0)
 	for rowStart <= rowEnd && colStart <= colEnd {
-		for i := colStart;i<= colEnd ; i++ {
-			arrayVal = append(arrayVal,array[rowStart][i])
+		for i := colStart; i <= colEnd; i++ {
+			arrayVal = append(arrayVal, array[rowStart][i])
 		}
 
-		for i := rowStart + 1 ; i <= rowEnd ; i++ {
-			arrayVal = append(arrayVal,array[i][colEnd])
+		for i := rowStart + 1; i <= rowEnd; i++ {
+			arrayVal = append(arrayVal, array[i][colEnd])
 		}
 
-		for i := colEnd - 1;i>=colStart && rowStart<rowEnd  ;i--{
-			arrayVal = append(arrayVal,array[rowEnd][i])
+		for i := colEnd - 1; i >= colStart && rowStart < rowEnd; i-- {
+			arrayVal = append(arrayVal, array[rowEnd][i])
 		}
-		for i := rowEnd-1;i>= rowStart+1 && colStart < colEnd ;i-- {
-			arrayVal = append(arrayVal,array[i][colStart])
+		for i := rowEnd - 1; i >= rowStart+1 && colStart < colEnd; i-- {
+			arrayVal = append(arrayVal, array[i][colStart])
 		}
 
 		rowStart++
@@ -42,4 +42,3 @@ func SpiralTraverse(array [][]int) []int {
 	}
 	return arrayVal
 }
-

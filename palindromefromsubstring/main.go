@@ -12,27 +12,27 @@ func main() {
 		{0, 3, 2},
 		{0, 4, 1},
 	}
-	for i, val := range queries{
+	for i, val := range queries {
 		firstIndex := val[0]
 		secIndex := val[1]
 		numberOfReplacement := val[2]
-		queriesRes[i] = getPalin(s[firstIndex:secIndex+1],numberOfReplacement)
+		queriesRes[i] = getPalin(s[firstIndex:secIndex+1], numberOfReplacement)
 	}
 	fmt.Println(queriesRes)
 }
 
 func getPalin(s string, replacement int) bool {
-	if len(s) ==1 {
+	if len(s) == 1 {
 		return true
 	}
 	keepCount := make(map[rune]int)
 	for _, val := range s {
-		if _,ok:= keepCount[val];ok {
-			delete(keepCount,val)
-		}else{
+		if _, ok := keepCount[val]; ok {
+			delete(keepCount, val)
+		} else {
 			keepCount[val] = 1
 		}
 	}
-	numberOfOddCount := len( keepCount )
+	numberOfOddCount := len(keepCount)
 	return numberOfOddCount/2 <= replacement
 }

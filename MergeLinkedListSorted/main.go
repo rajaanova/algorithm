@@ -11,10 +11,12 @@ func main() {
 		output = output.Next
 	}
 }
+
 type LinkedList struct {
 	Value int
 	Next  *LinkedList
 }
+
 func NewLinkedList(val int, others ...int) *LinkedList {
 	ll := &LinkedList{Value: val}
 	current := ll
@@ -37,9 +39,9 @@ func MergeLinkedLists(headOne *LinkedList, headTwo *LinkedList) *LinkedList {
 	if headOne.Value < headTwo.Value {
 		head = headOne
 		head.Next = MergeLinkedLists(head.Next, headTwo)
-	}else {
+	} else {
 		head = headTwo
-		head.Next = MergeLinkedLists(head.Next,headOne)
+		head.Next = MergeLinkedLists(head.Next, headOne)
 	}
 	return head
 }

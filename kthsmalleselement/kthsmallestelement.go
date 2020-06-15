@@ -2,12 +2,11 @@ package main
 
 import "fmt"
 
-
 //Find the k the smalles element from unsorted array
 
 func main() {
 	//Using quicksort approach or finding the reuqired parition
-	fmt.Println(QuickPartition([]int{ 32, 92, 17, 16, 34}, 3))
+	fmt.Println(QuickPartition([]int{32, 92, 17, 16, 34}, 3))
 }
 func QuickPartition(array []int, k int) int {
 	return Partition(array, 0, len(array)-1, k-1)
