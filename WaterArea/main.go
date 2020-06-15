@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+// https://stackoverflow.com/questions/24414700/water-collected-between-towers
 func main() {
 	output := WaterArea([]int{0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3})
 	if output != 48 {
