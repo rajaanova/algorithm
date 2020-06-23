@@ -5,8 +5,11 @@ import "fmt"
 //https://www.hackerrank.com/challenges/candies/problem
 
 func main() {
-		childrenByrating := []int{2,4,2,6,1,7,8,9,2,1}
-		fmt.Println(minCandies(childrenByrating))
+		//childrenByrating := []int{2,4,2,6,1,7,8,9,2,1}
+	childrenByrating := []int{9 ,2, 3, 6, 5 ,4 ,3 ,2 ,2, 2}
+
+
+	fmt.Println(minCandies(childrenByrating))
 }
 
 func minCandies(childrenByRating []int) int {
